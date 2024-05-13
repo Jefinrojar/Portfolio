@@ -1,0 +1,248 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+nav {
+    background-color: blueviolet;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.Name {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.contact-info {
+    font-size: 10px;
+    text-align: center;
+}
+.Contact-Num {
+    font-size: 10px;
+}
+.contact-info div {
+    margin-bottom: 3px;
+}
+.navbar-options {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar-options li {
+    margin-right: 15px;
+}
+.navbar-options li:last-child {
+    margin-right: 0;
+}
+.navbar-options li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 12px;
+}
+.navbar-options li a:hover {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* About */
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 40vh;
+}
+.content {
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+}
+.image {
+    flex: 1;
+    padding: 20px;
+}
+.text {
+    flex: 1;
+    padding: 20px;
+}
+.text p {
+    margin-top: 0;
+}
+.First.line {
+    color: blueviolet;
+    font-size: 30px;
+}
+.Main_Content{
+    font-size: 20px;
+}
+.Section_Complete{
+    width: 80%;
+    color: blueviolet;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#about{
+    margin-top: 40px;
+}
+/* Skills */
+
+.Skill-content {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: repeat(2, auto);
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-bottom: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Skill-box {
+    padding: 20px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.5rem;
+    border-bottom: 2px solid var(blueviolet);
+    box-shadow: 0 2px 7px rgb(14 55 54 / 15%);
+}
+.Skill-box a{
+    text-decoration: none;
+    color: black;
+}
+.Skill-box:hover{
+   background-color: #02225a;
+}
+  
+.Skill-box h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.7rem 0 0.4rem;
+}
+.Skill-box:hover h3{
+    color: #fff;
+}
+.Skill-box .bx {
+    padding-top: 2rem;
+    font-size: 54px;
+}
+.Skill-box:hover .bx{
+    color: #22cf91;
+}
+.Skill-box a {
+    font-weight: 500;
+}
+.Skill-box:hover a{
+    color: #8b8a8f;
+}
+
+  /* Project */
+
+.topic{
+    margin-left: 10%;
+    color: blueviolet;
+}
+.Project_space{
+    margin-left: 15%;
+}
+.Part_Complete{
+    width: 50%;
+    margin-top: 20px;
+}
+
+  /* Ṛecommendation */
+
+.recommendation_content{
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: repeat(2, auto);
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.recommendation_box {
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.5rem;
+    border-bottom: 2px solid var(blueviolet);
+    box-shadow: 0 2px 7px rgb(14 55 54 / 15%);
+}
+span{
+    color: blueviolet;
+}
+
+/* New Recommendation */
+
+form{
+    padding: 20px;
+    justify-content: center;
+    margin-top: 5px;
+    border: 2px;
+    border-color: black;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 0 2px 7px rgb(14 55 54 /15%);
+}
+
+input{
+    min-width: 350px;
+    border-radius: 0.5rem;
+    padding: 10px;
+    margin: 10px;
+}
+textarea{
+    min-width: 350px;
+    border-radius: 0.5rem;
+    padding: 10px;
+    min-height: 150px;
+    margin: 10px;
+}
+button{
+    background-color: rgb(255, 255, 255);
+    border-color: blueviolet;
+    color: blueviolet;
+    border-radius: 0.5rem;
+    width: 100px;
+    padding: 8px;
+}
+#imgbtn{
+    height: 4%;
+    width: 4%;
+    margin-left: 95%;
+}   
+button:hover{
+    color: white;
+    background-color: blueviolet;
+}
+
+
+/* Pop_Up */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(178, 116, 236);
+    border: 1px solid black;
+    border-radius: 0.8rem;
+    padding: 20px;
+    z-index: 1000; /* Ensure popup is above other content */
+}

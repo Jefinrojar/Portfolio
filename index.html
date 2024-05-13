@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div>
+            <div class="Name">jefinrojar</div>
+            <div class="contact-info">
+                <div><i class='bx bxs-envelope'></i>jefinrojar@gmail.com</div>
+            </div>
+            <div class="Contact-Num">
+                <div><i class='bx bxs-phone'></i>6380569995</div>
+            </div>
+        </div>
+        <ul class="navbar-options">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#recommendations">Recommendations</a></li>
+        </ul>
+    </nav>
+
+    <div id="about">
+        <div class="container">
+            <div class="content">
+                <div class="image">
+                    <img src="image.png" alt="Your Image" style="max-width: 100%;">
+                </div>
+                <div class="text">
+                    <p class="First line">Hi, I'm Jefinrojar !</p>
+                    <p class="Main_Content">I am a full stack developer with 2 years of experience in both application
+                        and presentation layers. I have worked on application and microservices deployed on IBM Cloud. I
+                        am an avid user of IBM Watson Services and have worked on Watson Assistant, NLU, Sentiment
+                        analyzer to name a few.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="Section_Complete">
+
+
+    <h1 class="topic">Skills</h1>
+    <div id="Skills" class="Skill-content">
+
+        <div class="Skill-box">
+            <i class='bx bxl-html5' style='color:#ee6710'></i>
+            <h3>HTML</h3>
+            <a href="#home">4 Years Experience</a>
+        </div>
+
+        <div class="Skill-box">
+            <i class='bx bxl-css3' style='color:#348acf'></i>
+            <h3>CSS</h3>
+            <a href="#home">4 Years Experience</a>
+        </div>
+
+        <div class="Skill-box">
+            <i class='bx bxl-javascript' style='color:#ffed20'></i>
+            <h3>Java Script</h3>
+            <a href="#home">3 Years Experience</a>
+        </div>
+
+        <div class="Skill-box">
+            <i class='bx bxl-react' style='color:#348acf'></i>
+            <h3>React</h3>
+            <a href="#home">4 Years Experience</a>
+        </div>
+
+        <div class="Skill-box">
+            <i class='bx bxl-nodejs' style='color:#2fd300'></i>
+            <h3>Node JS</h3>
+            <a href="#home">4 Years Experience</a>
+        </div>
+
+        <div class="Skill-box">
+            <i class='bx bxl-java' style='color:#008b95'></i>
+            <h3>Java</h3>
+            <a href="#home">4 Years Experience</a>
+        </div>
+    </div>
+    <hr class="Section_Complete">
+
+    <div>
+        <h1 class="topic">Projects</h1>
+        <div class="Project_space">
+            <h3>Chatbot</h3>
+            <li>Developed a secure website integrated with chatbot for an automobile client using HTML,CSS,Java Script
+                and Watson Assistant.</li>
+            <hr class="Part_Complete">
+
+            <h3>Sentiment Analyzer</h3>
+            <li>Developed and deployeed a sentiment analyzer for the box reviews section of an eCommerce platform using
+                IBM NLU.</li>
+            <hr class="Part_Complete">
+
+            <h3>Fashion Website</h3>
+            <li>Create a styled multi-page website for a new player in the fashion industry and integrated it with a
+                shopping cart, using stripe for payment gateway.</li>
+        </div>
+    </div>
+    <hr class="Section_Complete">
+
+    <h1 class="topic">Recommendations</h1>
+    <div id="recommendations" class="recommendation_content">
+
+        <div class="recommendation_box">
+            <p><span>"</span>jefinrojar is a very quick learner and quickly grasps key concepts of Web development.She got a
+                great attitude & she is an excellent team player.She has a curious mind and asks the right question she
+                takes initiative within a team and has potentials to lead the team.<span>"</span></p>
+        </div>
+
+        <div class="recommendation_box">
+            <p><span>"</span>Working with Jane has been an awesome experience.She is highly knowledgable and always goes
+                the extra step to make sure everything is right. For any future projects that need her expertise i would
+                definitely want to work with her again. <span>"</span></p>
+        </div>
+
+        <div class="recommendation_box">
+            <p><span>"</span>I had worked along with Jane during the initial phase of our venture which needed Web
+                development. She is a committed resource who has in depth knowledge about the domain.She will be an
+                asset for any organisation!<span>"</span></p>
+        </div>
+
+    </div>
+    <hr class="Section_Complete">
+
+    <center>
+        <div class="New_Recommendation">
+            <form>
+                <h1>Leave a Recommendation</h1>
+                <input type="text" placeholder="Name(Optional)"><br>
+                <textarea placeholder="Message" required></textarea><br>
+                <button onclick="openPopup()" onload="NewRecommendation()">Submit</button>
+            </form>
+        </div </center>
+
+        <a href="#body"><img id="imgbtn" src="Arrow.jpg" alt=""></a>
+
+        <div id="myPopup" class="popup">
+            <img src="Tick.png" alt="" style="width: 50px;height: 50px;">
+            <p>Thanks for leaving a recommendation!</p>
+            <button onclick="closePopup()">Ok</button>
+        </div>
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var form = document.querySelector('form');
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault(); // Prevent form submission
+                    NewRecommendation(); // Call function to add recommendation
+                    showPopup(); // Call function to show popup
+                });
+            });
+
+            function NewRecommendation() {
+                var message = document.querySelector('textarea').value;
+
+                // Create a new recommendation box
+                var newRecommendation = document.createElement('div');
+                newRecommendation.classList.add('recommendation_box');
+                newRecommendation.innerHTML = '<p><span>"</span>' + message + '<span>"</span></p>';
+
+                // Append the new recommendation box to the recommendations section
+                var recommendationsSection = document.getElementById('recommendations');
+                recommendationsSection.appendChild(newRecommendation);
+            }
+
+            function openPopup() {
+                var popup = document.getElementById("myPopup");
+                popup.style.display = "block";
+            }
+
+            function closePopup() {
+                var popup = document.getElementById("myPopup");
+                popup.style.display = "none";
+            }
+        </script>
+
+
+
+
+
+</body>
+
+</html>
